@@ -17,3 +17,5 @@ Pour générer il faut passer par 2 grandes étapes :
 2. Les fichiers HTML doivent être uploadés sur le site de la SFT afin qu'ils fonctionnent.
 
 3. Utilisation de **make_XML.py** pour faire les fichiers XML pour les DOI
+
+![](/home/phil/Papers/maker_SFT/Diagram.png)
