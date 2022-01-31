@@ -18,4 +18,4 @@ Pour générer il faut passer par 2 grandes étapes :
 
 3. Utilisation de **make_XML.py** pour faire les fichiers XML pour les DOI
 
-![](/home/phil/Papers/maker_SFT/Diagram.png)
+![](Diagram.png)
