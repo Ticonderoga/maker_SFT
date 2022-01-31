@@ -4,7 +4,7 @@ Ensemble de scripts pour la création des documents pour un Congrès de la Soci�
 
 Ce dépôt comporte l'architecture basique pour générer les recueils de résumés et d'actes pour le congrès de la SFT. Les abstracts sont ceux du congrès 2021 mais les fichiers PDF ne sont formés que d'une seule page. 
 
-Pour générer il faut passer par 2 grandes étapes :
+Pour générer il faut passer par 3 grandes étapes :
 
 1. Utilisation de **make_recueils.py**  pour faire les recueils de résumés et les actes 
    
