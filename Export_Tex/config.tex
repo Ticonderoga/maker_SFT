@@ -1,0 +1,99 @@
+
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage [T1] {fontenc}
+\usepackage{xspace}
+
+\usepackage[]{pdfpages}
+\usepackage{marvosym}
+\usepackage{sansmathfonts}
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\hyphenpenalty=0
+\pdfminorversion=7
+%\usepackage{multirow}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\sansmath
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[nohints]{minitoc}
+\setcounter{minitocdepth}{2}
+\setlength{\mtcindent}{0pt}
+\renewcommand{\mtcfont}{\small}
+\renewcommand{\mtcSfont}{\small}
+\mtcsettitle{minitoc}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{enumitem}
+%\usepackage[]{url}
+\usepackage[makeindex]{imakeidx}
+\makeindex[options= -s ../index_style.ist, title=Liste des auteurs]
+
+%\usepackage[a4paper,top=1.5cm,bottom=1.5cm,left=2cm,right=2cm]{geometry}
+\usepackage[a4paper,top=1.5cm,bottom=1.5cm,left=1.8cm,right=1.8cm]{geometry}
+
+
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.jpg,.eps,.pdf,.png}
+
+\usepackage{supertabular}
+
+\setlength{\parindent}{10mm}
+\setlength{\parskip}{2mm}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
+
+
+\usepackage[pages=some,contents={Work In Progress},color=gray!50]{background}
+
+
+\usepackage[compact]{titlesec} %
+%\titleformat*{\section}{\LARGE\bfseries}
+%\titleformat*{\subsection}{\Large\bfseries}
+%\titleformat{\subsection}{\large\bfseries}{\thesection}{3em}{\hrule}
+%\titlespacing{\chapter}{*}{*8}{*}
+
+%%%%%%%%%% Titre en haut de page
+\usepackage{fancyhdr}
+%\usepackage{fancyheadings}
+%\renewcommand{\headrulewidth}{0.0pt}
+%\renewcommand{\footrulewidth}{0.0pt}
+\setlength{\headheight}{15pt}
+\renewcommand{\headrule}{\hrule height 0.5pt}
+\renewcommand{\footrule}{\hrule height 0.5pt}
+%
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\fancyhead[C]{Congrès Français de Thermique SFT 2021, Belfort, 1\ier{} -- 3 juin 2021}
+\fancyhead[L]{}
+\fancyhead[R]{}
+\pagestyle{fancy}
+
+\usepackage{ifthen}
+
+\usepackage[final,colorlinks,linkcolor={blue},citecolor={blue},urlcolor={red},]{hyperref} % Version PDF
+%\usepackage[draft,pdftex,colorlinks,linkcolor={blue},citecolor={blue},urlcolor={red},]{hyperref} % Version IMPRIMEE
+
+%\renewcommand*\url[1]{\href{mailto:#1}{\texttt{#1}}}
+
+
+%%%% PAS DE NUMEROTATION SUR LES PAGES DE PARTIES
+%\usepackage{etoolbox}
+%\patchcmd{\part}{\thispagestyle{plain}}{\thispagestyle{empty}}
+%  {}{\errmessage{Cannot patch \string\part}}
+
+
+\hyphenation{con-flu-ence Ga-ny-me-de}
+\newcommand{\unit}[1]{\,\mathsf{#1}}
+\newcommand{\dC}{\,{}^{\circ}\mathsf{C}{}}
+
+%============
+% Réglages césure des mots
+%===========
+\sloppy					% Rend les coupures moins fréquentes en ajoutant des espaces
+\widowpenalty=10000	% empeche au maximum la coupure avant la derniere ligne
+\clubpenalty=10000		% empeche au maximum la coupure apres la premiere ligne
+\raggedbottom			% empeche letirement des ressorts verticaux

@@ -1,0 +1,154 @@
+/*  Feuille de style markdown-pandoc.css
+    d'amélioration du look des pages HTML générées par Pandoc à partir de source Markdown
+    CC BY-SA  Jean-Daniel-Bonjour@epfl.ch, EPFL-ENAC-IT (référence http://enacit1.epfl.ch/markdown-pandoc/)
+
+    M-à-j sur: (w530/t3500) ENAC-IT/divers/markdown-pandoc/
+                root@enacit1lin1:/data/it1/markdown-pandoc/
+                enacit1@enacit1vm1:/data/web/enacit1-sysadmin/
+*/
+
+
+/* Caractéristiques de base de l'ensemble du BODY de la page */
+body { margin-left: auto; margin-right: auto; max-width: 970px; font-family: serif; font-size: 17px; color: #444; width: 970px}   /* fonte serif ! */
+@media print {
+  body { color: #000; }   /* plus foncé à l'impression */
+}
+
+/* Ci-dessous, limiterait la largeur page au standard charte EPFL */
+/*  body { width: 980px; margin-left: auto; margin-right: auto; margin-top: 0pt; }  */
+
+
+/* Densification de l'affichage */
+p      { margin: 4px 0 6px 0; }   /* diminution espace entre paragraphe */
+ul, ol { margin: 2px 0 2px 0; padding-left: 30px; }   /* diminution espace au-dessus listes, et espace sur la gauche */
+
+
+
+/* Style des titres H1 à H6 */
+h1, h2, h3, h4, h5, h6 { font-family: Arial, Helvetica, sans-serif; }
+h1          { font-size: 24px; margin: 38px 0 20px 0; border: 0; background: #eee; padding-left: 6px; box-shadow: 3px 3px 3px #aaa; }
+h2          { font-size: 22px; margin: 30px 0 14px 0; border-top: 1px solid #999; }
+h3          { font-size: 20px; margin: 24px 0 14px 0; }
+h4, h5, h6  { font-size: 18px; margin: 19px 0 14px 0; }  /* sinon font-size plus petite que le texte /*
+
+/* - styles spécifiques du bloc titre/auteur/date du document (basé H1/H2/H3) */
+h1.title            { text-align: center; margin: 10px 0 10px 0; color: #ddd; background: #555; }
+h2.author, h3.date  { text-align: center; margin: 0; border: none; font-size: 16px; }
+p.author, p.date  { text-align: center; margin: 0; border: none; font-size: 16px; }
+
+/* - styles des liens des titres H* et de la TOC (en cas d'activation TOC Pandoc) */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a  { color: #444; text-decoration: none; }
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover  { text-decoration: none; background: #ccc; }  /* survol lien */
+div#TOC ul  { list-style-type: none; }   /* enlever les puces dans TOC */
+
+
+/* - amélioration de la numérotation des titres H1 à H6 ainsi que dans TOC */
+.header-section-number { padding-right: 8px; }  /* détacher les Nos de titres dans la page */
+.toc-section-number    { padding-right: 6px; }  /* détacher les Nos de titres dans la TOC */
+h1 .header-section-number:after               { content: "." }   /* ajouter un point après le numéro des titres de 1er niveau */
+div#TOC ul li .toc-section-number:after       { content: "." }  /* ajouter dans la TOC un point après le numéro des titres de 1er niveau */
+div#TOC ul li ul li .toc-section-number:after { content: ""  }  /* ... mais pas après les numéros des titres de niveau 2,3,4,5,6 */
+
+
+/* - suppression des numéros superflus dans la TOC d'un document ePub */
+ol.toc li { list-style-type: none; }
+
+
+
+/* Amélioration des liens A */
+a                       { text-decoration: none; border-bottom: none; color: #26d; }
+a:hover,  a:hover code  { text-decoration: underline; background: #def; }
+a:active, a:active code { background: #48f; color: #fff; }
+@media print {
+  a { color: #04a; }   /* plus foncé à l'impression */
+}
+
+/* - en cas d'impression on affiche les URLs des liens
+       - sauf dans TOC et sur titres en cas de TOC
+       - ni dans les références de notes de bas de page   */
+/*   note: je désactive tout ça le 20.11.2013 car ça pollue les liens de mon support de cours Python
+@media print {
+  a:after { content: " (" attr(href) ") "; font-size: 0.8em; }
+
+  div#TOC a:after            { content: "" }
+  h1 a:after, h2 a:after, h3 a:after, h4 a:after, h5 a:after, h6 a:after { content: "" }
+  a.footnoteRef:after        { content: "" }
+  div.footnotes li a:after   { content: "" }
+  div.no-print-links a:after { content: "" }
+}
+*/
+
+
+/* Simplification des HR */
+hr { height: 1px; border: 0; color: #999; background: #999; }
+
+
+/* Style des TABLE (si placées dans <DIV> avec classe center/border/shadow ci-dessous) */
+div.center table     { margin-left:auto; margin-right:auto; }
+div.border table     { border-collapse: collapse; }
+div.border table th  { padding: 3px; border: solid 1px #999; font-weight: bold; background: #eee; }
+div.border table td  { padding: 3px; border: solid 1px #999; line-height: inherit; }
+div.shadow table     { box-shadow: 3px 3px 3px #aaa; }
+tr:hover      { background: #fff8e8; } /* Couleur de fonds quand on survole une ligne de tableau */
+table caption { caption-side: bottom; margin: 8px; }  /* sinon la légende est au-dessus du tableau */
+
+
+/* Amélioration des "figures" Pandoc (qui sont des IMAGES-paragraphes) */
+div.figure           { text-align: center; }  /* centrer la figure et sa légende */
+div.figure p.caption { margin: 8px; }         /* détacher la légende de la figure */
+div.figure img       { box-shadow: 3px 3px 3px #aaa; }
+
+
+
+/* Amélioration CODE et PRE */
+code     { font-family: monospace; font-size: 11px; font-weight: bold; color: #559; background: #f8f8ff; padding-left: 3px; padding-right: 3px; }
+pre      { background: #f8f8ff; border: 0px solid #ddf; padding: 4px 4px 4px 6px; line-height: 13px; border-bottom: 3px solid #fff; }
+pre code { font-size: 11px; font-weight: normal; padding-left: 0; padding-right: 0; }
+code i   { font-weight: normal; }  /* pour code italique post-processé par mon post-pandoc.pl */
+
+/* classes de CODE spécifiques enac-it1 : OUTtput de commande, SNIPsnap */
+pre.out       { background: #fff;    padding: 0 0 0 6px;   margin: 0 0 0 30px; border-left: 3px solid #ccc; }
+pre.out code  { background: #fff;    font-style:italic; color: #666; }
+pre.snip      { background: #fff8f0; padding: 0 0 1px 6px; margin: 0 0 0 40px; border-bottom: 3px solid #fff; }
+pre.snip code { background: #fff8f0; color: #530; }
+/* ainsi que décalage à droite du code de classe BASH */
+pre.bash      { margin: 0 0 0 24px; }
+
+
+/* - et cosmétique en cas du coloration syntaxique Pandoc du code et avec numérotation de lignes */
+tr.sourceCode:hover { background: none; }  /* annuler effet de survol */
+td.lineNumbers      { padding: 0 2px 0 0; width: 25px; color: #bbbbbb; background: #fafafa; border-right: 1px solid #aaa; }
+td.sourceCode       { padding: 0; }
+td.lineNumbers pre  { margin: 0; background: inherit; font-size: 8px; }
+td.sourceCode  pre  { margin: 0; padding-left: 10px; }
+
+
+
+/* Amélioration des notes de bas de page Pandoc */
+div.footnotes      { font-size: 11px; padding-top: 50px; }  /* plus petit et détacher du document */
+div.footnotes hr   { width: 20%; margin-left: 0; text-align: left; }  /* raccourcir séparateur */
+div.footnotes ol p { margin: 0px; }   /* interligne entre notes */
+
+
+
+/* Bi-colonne JDB par <TABLE> (n'est effectif qu'en cas de conversion Pandoc en HTML !) */
+table.bicol     { width: 100%; padding: 0; }
+table.bicol td  { width: 50%; vertical-align:top; padding-right: 10px; }
+td.o            { box-shadow: 3px 3px 3px #aaa; padding-left: 5px; }
+table.bicol pre { margin: 0; }
+table.bicol tr:hover { background: none; }  /* annuler effet de survol */
+
+
+/* Alternative JDB de bi-colonne par <DIV> (g=Gauche, d=Droite, f=Fin)
+   (n'est également effectif qu'en cas de conversion Pandoc en HTML !)*/
+div.g   { float: left; width: 48%; margin: 8px 1%  10px 0px; border: 0px solid #000; }
+div.d   { float: left; width: 49%; margin: 8px 0px 10px 0px; border: 0px solid #000; }
+div.f   { clear: both; }
+div pre { margin: 0; }   /* cosmétique */
+/* Variante bi-colonne ombrée (o=Ombrée) */
+div.go  { float: left; width: 48%; margin: 8px 1%  10px 0px; border: 1px solid #ddd; padding: 0 4px 0 4px; box-shadow: 3px 3px 3px #aaa; }
+div.do  { float: left; width: 48%; margin: 8px 0px 10px 0px; border: 1px solid #ddd; padding: 0 4px 0 4px; box-shadow: 3px 3px 3px #aaa; }
+
+
+/*  */
+mark, .eit_bg_jaune3 { background: #ffc; }

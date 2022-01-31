@@ -1,0 +1,76 @@
+
+
+    %=====================================
+    %   WARNING
+    %   FICHIER AUTOMATISE
+    %   NE PAS MODIFIER
+    %=====================================
+
+    \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Papier 76
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Indexations
+\index{SansMorgan@Sans, Morgan}
+\index{PenazziLea@Penazzi, Léa}
+\index{ElHafiMouna@El Hafi, Mouna}
+\index{CaliotCyril@Caliot, Cyril}
+\index{FargesOlivier@Farges, Olivier}
+\index{FournierRichard@Fournier, Richard}
+\index{BlancoStephane@Blanco, Stéphane}
+%
+% Titre
+\begin{flushleft}
+\phantomsection\addtocounter{section}{1}
+\addcontentsline{toc}{section}{Méthode de Monte-Carlo Symbolique pour la caractérisation des propriétés thermophysiques : cas de la méthode flash}
+{\Large \textbf{Méthode de Monte-Carlo Symbolique pour la caractérisation des propriétés thermophysiques : cas de la méthode flash}}\label{ref:76}
+\end{flushleft}
+%
+% Auteurs
+Morgan Sans$^{1,\star}$, Léa Penazzi$^{1}$, Mouna El Hafi$^{1}$, Cyril Caliot$^{2}$, Olivier Farges$^{3}$, Richard Fournier$^{4}$, Stéphane Blanco$^{4}$\\[2mm]
+$^{\star}$ \Letter : \url{morgan.sans@mines-albi.fr}\\[2mm]
+{\footnotesize $^{1}$ Université de Toulouse, Mines Albi, UMR 5302 - Centre RAPSODEE}\\
+{\footnotesize $^{2}$ Université de Pau et des Pays de l'Adour, UMR 5142 - LMAP}\\
+{\footnotesize $^{3}$ Université de Lorraine, UMR 7563 - LEMTA}\\
+{\footnotesize $^{4}$ Université de Toulouse, UMR 3589 - LAPLACE}\\
+[4mm]
+%
+% Mots clés
+\noindent \textbf{Mots clés : } Monte-Carlo symbolique, méthodes inverses, méthode flash, méthode numérique\\[4mm]
+%
+% Résumé
+\noindent \textbf{Résumé : } 
+
+{\small
+Dans le cadre de problèmes d'inversion non-linéaires, la recherche d'optimum est réalisée itérativement et nécessite d'accéder répétitivement à la solution du modèle direct choisi. Ce constat contraint ainsi l'inverseur à mettre en place une expérience pouvant être simulée par un modèle suffisamment simple pour garantir une construction de la solution peu coûteuse en temps de calcul. 
+
+
+
+Un compromis entre le niveau de complexité du modèle (hypothèses et conditions aux limites) et de l'expérience (matériaux utilisés et métrologie) est à réaliser. Cependant, la caractérisation de milieux complexes à haute température tels que les fibres, les mousses solides ou les liquides silicatés nécessite des modèles de transferts couplés de la chaleur (milieux semi-transparents) et des outils numériques permettant d'intégrer une grande complexité géométrique (problème 3D multi-échelles).
+
+
+
+Les développements récents de modèles probabilistes pour résoudre les transferts thermiques couplés par Monte Carlo permettent de proposer une solution intéressante à ces besoins. En effet, les algorithmes de Monte-Carlo bénéficient des outils numériques avancés de synthèse d'images pour gérer la géométrie complexe. L'estimation locale de la température est alors réalisée à partir de la construction de chemins évoluant, sans recourir à un maillage volumique, dans la géométrie complexe 3D selon les différents modes de transports impliqués. Lors de la marche, ils mesurent l'influence des sources surfaciques/volumiques et s'arrêtent lorsqu'une température connue comme la température initiale ou une condition de Dirichlet est atteinte. 
+
+
+
+Plus récemment, il a été montré que le stockage de l'information contenue dans ces chemins permet de construire une fonction liant la température sonde aux propriétés thermophysiques du modèle thermique. Il est alors possible de réaliser un unique calcul de l'algorithme de Monte-Carlo dit Symbolique qui permettra de reconstruire la solution pour n'importe quelle valeur de paramètre.
+
+
+
+La méthode de Monte-Carlo Symbolique (MCS) permet donc de bénéficier des avantages de la méthode de Monte-Carlo (traitement de géométries complexes et multiphysiques) avec une réduction très significative des temps de calcul. Un unique calcul réalisé sur un problème thermique donné permet de stocker l'information suffisante pour réaliser rapidement l'ensemble de la procédure d'inversion. 
+
+
+
+Cependant, les études actuelles se limitent à une dépendance unique au coefficient de convection ou à la diffusivité avec conditions aux limites de Dirichlet. 
+
+
+
+Avec l'idée du développement des connaissances autour de la méthode de MCS et le passage vers la 3D multiphysique n'étant pas limitant, nous proposons de revisiter et de mettre en oeuvre cette nouvelle technique sur le cas classique et académique de la méthode flash 1D. Après un bref rappel du problème thermique, nous détaillons la méthodologie associée à la résolution par la méthode de MCS. Enfin, la diffusivité est estimée par inversion du problème et est validée par comparaison à la méthode semi-analytique des quadripôles thermiques.
+
+ \vfill doi : \url{https://doi.org/10.25855/SFT2021-076}
+
+}
+ 

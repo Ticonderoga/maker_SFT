@@ -1,0 +1,68 @@
+
+
+    %=====================================
+    %   WARNING
+    %   FICHIER AUTOMATISE
+    %   NE PAS MODIFIER
+    %=====================================
+
+    \newpage
+
+\backgroundsetup{contents={Work In Progress},scale=7}
+\BgThispage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Papier 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Indexations
+\index{DelubacRegis@Delubac, Régis}
+\index{SerraSylvain@Serra, Sylvain}
+\index{SochardSabine@Sochard, Sabine}
+\index{ReneaumeJean-Michel@Reneaume, Jean-Michel}
+%
+% Titre
+\begin{flushleft}
+\phantomsection\addtocounter{section}{1}
+\addcontentsline{toc}{section}{Un outil d'optimisation multi-périodes pour les réseaux de chaleur solaire}
+{\Large \textbf{Un outil d'optimisation multi-périodes pour les réseaux de chaleur solaire}}\label{ref:4}
+\end{flushleft}
+%
+% Auteurs
+Régis Delubac$^{1}$, Sylvain Serra$^{1,\star}$, Sabine Sochard$^{1}$, Jean-Michel Reneaume$^{1}$\\[2mm]
+$^{\star}$ \Letter : \url{sylvain.serra@univ-pau.fr}\\[2mm]
+{\footnotesize $^{1}$ Universite de Pau et des Pays de l'Adour, E2S UPPA, LaTEP, Pau}\\
+[4mm]
+%
+% Mots clés
+\noindent \textbf{Mots clés : } Solaire thermique, réseaux de chaleur, optimisation NLP, aide à la conception, Julia (JuMP)\\[4mm]
+%
+% Résumé
+\noindent \textbf{Résumé : } 
+
+{\normalsize
+Le LaTep, Tecsol, NewHEAT et Sermet SudOuest se sont regroupés en un consortium autour du projet ISORC-OPTIMISER (financé par l'ADEME et la Région Nouvelle Aquitaine).  L'une des tâches de ce projet est de créer un outil « open access » pour optimiser le dimensionnement et l'exploitation des Réseaux de Chaleur Urbains (RCU) intégrant dans leur mix énergétique du solaire thermique. Cet outil étant à destination des collectivités, bureaux d'études et entreprises, il se doit d'être à la fois performant, rapide et accessible.
+
+
+
+L'outil est programmé en langage Julia en utilisant le package d'optimisation JuMP qui permet d'utiliser différents solveurs d'optimisation en conservant une formulation unique. Selon les conditions de fonctionnement et les besoins (taille du problème, précision désirée, temps), l'utilisateur pourra utiliser un solveur open-source ou commercial (généralement plus performant ou rapide). Le problème à résoudre étant par essence dynamique (solaire, stockage, demande variable), le choix d'une optimisation multi-périodes a été fait afin de réduire le temps de calcul.
+
+
+
+Dans cette étude, trois jours caractéristiques (été, hiver, intersaison) sont utilisés avec un pas de temps horaire pour représenter une année. L'optimum économique est calculé sur la somme de toutes les périodes couvrant ainsi l'horizon de temps total et les coûts sont déterminés sur une période de 20 ans.
+
+
+
+Cette contribution présente les premiers résultats d'optimisation du système complet utilisant pour l'instant un modèle simplifié pour la centrale solaire. 
+
+
+
+Ceci inclut un stockage journalier, les échangeurs de chaleur ainsi qu'une source non renouvelable (gaz) et deux renouvelables (solaire thermique et biomasse). Ce système étant soumis à une demande du réseau variable et des données météos variables dans le temps. Le problème à résoudre est de type NLP (NonLinear Programming) et les non-linéarités sont principalement dues à la fonction objectif ainsi qu'aux contraintes représentant les limites techniques des sous-systèmes.
+
+
+
+Enfin, les principaux résultats de ce travail (dimensionnement et fonctionnement des sources) seront présentés. A terme, ces résultats serviront d'initialisation à une optimisation plus complexe détaillant plus finement la centrale solaire et ses contraintes.
+
+ \vfill Work In Progress
+
+}
+ 

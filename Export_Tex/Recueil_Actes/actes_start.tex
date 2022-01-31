@@ -1,0 +1,57 @@
+\documentclass[12pt,a4paper, openright]{book}
+
+\newcommand{\tome}{2}
+
+\input{../config.tex}
+
+\hypersetup{
+  pdfinfo={
+    Title={SFT2021 - Actes},
+	Author={Communauté SFT},
+	Subjects={Congrès SFT 2021 - Belfort},
+	Producer={Philippe Baucour},
+	Creator={FEMTO-ST}
+  }
+}
+
+\begin{document}
+\pagestyle{fancyplain}
+\dominitoc
+
+%BLABLABLA
+%
+\input{./page-garde.tex}
+%
+\part{Préface}
+
+\cleardoublepage
+\input{../remerciements.tex}
+\cleardoublepage
+\input{../comite-organisation.tex}
+\cleardoublepage
+\input{../Tableau_Reviewer.tex}
+\cleardoublepage
+\input{../introduction.tex}
+\cleardoublepage
+\input{../programme.tex}
+\cleardoublepage
+\input{../prix-biot-fourier.tex}
+%
+\phantomsection
+\addcontentsline{toc}{chapter}{Table des matières}
+\tableofcontents
+%
+\mainmatter
+
+\adjustmtc[+1]
+
+\part{Textes complets}
+%
+\makeatletter
+\renewcommand{\@chapapp}{Thème}
+\makeatother
+
+%%%%%%% T1 %%%%%
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{part}{Tome 1}

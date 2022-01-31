@@ -1,0 +1,65 @@
+
+
+    %=====================================
+    %   WARNING
+    %   FICHIER AUTOMATISE
+    %   NE PAS MODIFIER
+    %=====================================
+
+    \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Papier 58
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Indexations
+\index{OuhimdMustapha@Ouhimd, Mustapha}
+\index{BouiaHassan@Bouia, Hassan}
+\index{ObrechtChristian@Obrecht, Christian}
+\index{KuznikFrederic@Kuznik, Frédéric}
+\index{BouquerelMathias@Bouquerel, Mathias}
+%
+% Titre
+\begin{flushleft}
+\phantomsection\addtocounter{section}{1}
+\addcontentsline{toc}{section}{Modélisation thermique de bâtiments intégrant le BIM et la méthode des graphes avec le module NetworkX de Python.}
+{\Large \textbf{Modélisation thermique de bâtiments intégrant le BIM et la méthode des graphes avec le module NetworkX de Python.}}\label{ref:58}
+\end{flushleft}
+%
+% Auteurs
+Mustapha Ouhimd$^{1,\star}$, Hassan Bouia$^{2}$, Christian Obrecht$^{3}$, Frédéric Kuznik$^{3}$, Mathias Bouquerel$^{2}$\\[2mm]
+$^{\star}$ \Letter : \url{mustapha.ouhimd@insa-lyon.fr}\\[2mm]
+{\footnotesize $^{1}$ BHEE Bâtiment Haute Efficacité Energétique, Laboratoire en commun entre EDF R\&D TREE et le CETHIL.}\\
+{\footnotesize $^{2}$ EDF R\&D Site des Renardières, Dpt. TREE, avenue des Renardières, 77250 Ecuelles - Moret-sur-Loing cedex, France}\\
+{\footnotesize $^{3}$ CETHIL UMR5008, Centre d'Energétique et de THermIque de Lyon, 9 Rue de la Physique, 69621 Villeurbanne, France}\\
+[4mm]
+%
+% Mots clés
+\noindent \textbf{Mots clés : } Modélisation en thermique des bâtiments, simulation numérique, BIM, gbXML, Networkx\\[4mm]
+%
+% Résumé
+\noindent \textbf{Résumé : } 
+
+{\normalsize
+Le secteur du bâtiment est un secteur consommateur d'énergie finale et générateur d'émissions de gaz à effet de serre, cela le met au cœur des politiques publiques de transition énergétique engagées pour réduire ces consommations énergétiques et les émissions associées. Ces politiques ont défini de nouveaux objectifs et exigences en lien avec l'efficacité énergétique en particulier. La modélisation de la thermique de bâtiment représente un des axes permettant de traiter en partie ces objectifs.
+
+
+
+Dans ce contexte, cet article présente une méthodologie de traduction du comportement thermique des bâtiments en intégrant, d'une part, les maquettes numériques dites maquettes BIM Building Information Modeling permettant de fournir une structure de données thermophysiques bien définie, et exploitable de façon générique, et d'autre part, le module puissant networkx de python contenant les méthodes appliquées de la théorie des graphes.
+
+
+
+Cette méthodologie consiste en la transformation de maquettes BIM sous format gbXML décrivant les propriétés géométriques et physiques des bâtiments, en un graphe. Ce graphe est constitué de sommets représentant les points d'intérêt pour le calcul des températures (volume d'air, surface de paroi, interface entre les couches de matériaux…). Ces sommets sont interconnectés par des arcs représentant les flux thermiques entre eux (conduction, convection, renouvellement d'air, ponts thermiques, …).
+
+
+
+L'exploitation d'un tel graphe permet de construire le système linéaire d'état complet des bâtiments (C.dT/dt = A.T + B.U) très facilement dans le cas d'échange radiatif grandes longueurs d'onde linéarisé. Ce système d'état linéaire obtenu est un modèle continu dans le temps. Pour le résoudre numériquement, cela nécessite le passage à un modèle discret dans l'espace et dans le temps, avec une taille qui dépend de la finesse dans la discrétisation, de la richesse physique du système, du nombre d'hypothèses, et des sollicitations thermiques traitées.
+
+
+
+Afin de valider la méthode, un cas simple de bâtiment sera modélisé par un graphe et par un autre modèle créé à partir de la bibliothèque nommée buildSysPro qui a déjà été testée et validée. Une comparaison des résultats générés à partir de ces deux modèles permettra de valider la nouvelle méthode intégrant la méthode des graphes.
+
+ \vfill doi : \url{https://doi.org/10.25855/SFT2021-058}
+
+}
+ 

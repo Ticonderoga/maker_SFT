@@ -1,0 +1,58 @@
+\documentclass[12pt,a4paper, openright]{book}
+%=====================================
+%   WARNING
+%   FICHIER AUTOMATISE
+%   NE PAS MODIFIER
+%=====================================
+
+\input{../config.tex}
+
+\hypersetup{
+  pdfinfo={
+    Title={SFT2021 - Recueil des Résumés},
+    Author={Communauté SFT},
+    Subjects={Congrès SFT 2021 - Belfort},
+    Producer={Philippe Baucour},
+    Creator={FEMTO-ST, Dept Energie}
+  }
+}
+
+\begin{document}
+\SetBgContents{}
+\pagestyle{fancyplain}
+\dominitoc
+
+%BLABLABLA
+
+\frontmatter
+%
+\input{./page-garde.tex}
+%
+\part{Prolégomènes}
+
+ \input{../remerciements.tex}
+ \cleardoublepage
+ \input{../comite-organisation.tex}
+ \cleardoublepage
+ \input{../Tableau_Reviewer.tex}
+ \cleardoublepage
+ \input{../introduction.tex}
+ \cleardoublepage
+ \input{../programme.tex}
+ \cleardoublepage
+ \input{../prix-biot-fourier.tex}
+
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Table des matières}
+\tableofcontents
+%
+\mainmatter
+
+\adjustmtc[+1]
+
+\part{Résumé des communications}
+%
+\makeatletter
+\renewcommand{\@chapapp}{Thème}
+\makeatother

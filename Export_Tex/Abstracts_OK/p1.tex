@@ -1,0 +1,74 @@
+
+
+    %=====================================
+    %   WARNING
+    %   FICHIER AUTOMATISE
+    %   NE PAS MODIFIER
+    %=====================================
+
+    \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Papier 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Indexations
+\index{VilleminThomas@Villemin, Thomas}
+\index{FargesOlivier@Farges, Olivier}
+\index{ParentGilles@Parent, Gilles}
+\index{ClaverieRemy@Claverie, Rémy}
+\index{BouyerJulien@Bouyer, Julien}
+%
+% Titre
+\begin{flushleft}
+\phantomsection\addtocounter{section}{1}
+\addcontentsline{toc}{section}{Modélisation et intégration temporelle d'un problème thermique couplé par la méthode de Monte Carlo}
+{\Large \textbf{Modélisation et intégration temporelle d'un problème thermique couplé par la méthode de Monte Carlo}}\label{ref:1}
+\end{flushleft}
+%
+% Auteurs
+Thomas Villemin$^{1,\star}$, Olivier Farges$^{2}$, Gilles Parent$^{2}$, Rémy Claverie$^{3}$, Julien Bouyer$^{4}$\\[2mm]
+$^{\star}$ \Letter : \url{thomas.villemin@univ-lorraine.fr}\\[2mm]
+{\footnotesize $^{1}$ Université de Lorraine, CNRS, LEMTA, F-54000 Nancy, France ; Cerema Est, Équipe de Recherche TEAM, 71 rue de la grande haie – 54510 Tomblaine, France}\\
+{\footnotesize $^{2}$ Université de Lorraine, CNRS, LEMTA, F-54000 Nancy, France}\\
+{\footnotesize $^{3}$ Cerema, Équipe Recherche TEAM, 71 rue de la grande haie, 54510 Tomblaine, France}\\
+{\footnotesize $^{4}$ Cerema Est, Équipe de Recherche TEAM, 71 rue de la grande haie – 54510 Tomblaine, France}\\
+[4mm]
+%
+% Mots clés
+\noindent \textbf{Mots clés : } Méthode de Monte Carlo, Couplage, Conduction, Rayonnement, Convection\\[4mm]
+%
+% Résumé
+\noindent \textbf{Résumé : } 
+
+{\normalsize
+La fonction des panneaux photovoltaïques est de convertir l'énergie solaire reçue sous forme de rayonnement en énergie électrique. Cependant, une part importante de l'énergie incidente est aussi transformée en chaleur conduisant à une élévation rapide de la température du panneau, supérieure à 70$^{\circ}$C en surface, ce qui a pour conséquence une baisse significative du rendement. Afin d'évaluer correctement ce rendement, une modélisation thermique est nécessaire car il dépend directement de la température des cellules photovoltaïques, grandeur soumise à la variation temporelle des paramètres climatiques dans l'environnement du panneau. De nombreux modèles ont été développés en se basant sur des hypothèses ne prenant pas en compte – ou très peu – les conditions environnementales locales (e.g. variables climatiques, masques solaires) ou l'ensemble des phénomènes physiques (e.g. bilan d'énergie de surface).
+
+
+
+
+
+
+
+Ce travail porte spécifiquement sur la modélisation thermique d'un milieu solide opaque en environnement réaliste soumis à des conditions climatiques effectives. L'aspect semi-transparent d'un panneau solaire n'est pas pris en considération dans notre étude. Le modèle développé avec la méthode de Monte Carlo couple tous les types de transferts thermiques – rayonnement, convection, conduction et flux solaire – appliqués à une géométrie simple en intégrant temporellement les paramètres climatiques. Par ailleurs, la méthode de Monte Carlo ayant déjà fait ses preuves sur sa capacité à gérer les géométries complexes, le passage à une géométrie réelle (e.g. multicouche, plusieurs matériaux) n'ajoutera pas de complexité au modèle.
+
+
+
+
+
+
+
+La géométrie choisie est une plaque de dimensions 1 m × 1 m × 0,035 m disposée parallèlement au sol. Les simulations des températures de la plaque sont effectuées en considérant plusieurs matériaux. Les paramètres climatiques sont le rayonnement global ($\unit{W\cdot m^{-2}}$), les températures d'air et de surface de sol ($^{\circ}$C) ainsi que la vitesse du vent ($\unit{m \cdot s^{-1}}$). Les données pro- viennent de la plateforme expérimentale du Cerema à Nancy.
+
+
+
+
+
+
+
+Les résultats obtenus mettent en évidence l'influence du choix des matériaux et des para- mètres climatiques sur les températures simulées et valident les hypothèses initiales.
+
+ \vfill doi : \url{https://doi.org/10.25855/SFT2021-001}
+
+}
+ 

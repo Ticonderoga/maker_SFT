@@ -1,0 +1,59 @@
+
+
+    %=====================================
+    %   WARNING
+    %   FICHIER AUTOMATISE
+    %   NE PAS MODIFIER
+    %=====================================
+
+    \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Papier 49
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Indexations
+\index{MailletDenis@Maillet, Denis}
+\index{ZacharieCelien@Zacharie, Célien}
+\index{RemyBenjamin@Rémy, Benjamin}
+%
+% Titre
+\begin{flushleft}
+\phantomsection\addtocounter{section}{1}
+\addcontentsline{toc}{section}{Modèles réduits ARX et produit de convolution en thermique linéaire des systèmes invariants}
+{\Large \textbf{Modèles réduits ARX et produit de convolution en thermique linéaire des systèmes invariants}}\label{ref:49}
+\end{flushleft}
+%
+% Auteurs
+Denis Maillet$^{1,\star}$, Célien Zacharie$^{1}$, Benjamin Rémy$^{1}$\\[2mm]
+$^{\star}$ \Letter : \url{denis.maillet@univ-lorraine.fr}\\[2mm]
+{\footnotesize $^{1}$ Université de Lorraine}\\
+[4mm]
+%
+% Mots clés
+\noindent \textbf{Mots clés : } ARX, identification, déconvolution, inverse, régularisation\\[4mm]
+%
+% Résumé
+\noindent \textbf{Résumé : } 
+
+{\normalsize
+Lorsqu'un système matériel est soumis à de la diffusion thermique et éventuellement à de l'advection fluide, ou même à du rayonnement linéarisé, la réponse transitoire en température en un point de l'espace est un produit de convolution entre une réponse impulsionnelle et une source thermique (puissance ou température en un autre point). Ceci est vrai si trois conditions sont remplies : i) le système est régi par une équation de la chaleur et à des conditions associées qui sont Linéaires avec des coefficients Invariants en Temps (système mathématique LIT), ii) la source transitoire est unique et séparable, c'est-à-dire qu'elle peut s'écrire comme le produit d'une fonction de l'espace (son support) par une fonction du temps (son intensité) et iii) le régime préexistant, avant imposition de la source, est permanent, mais non nécessairement uniforme.
+
+
+
+Lorsqu'on dispose des enregistrements temporels de la source et de sa réponse en un point, et que ceux-ci ne sont entachés d'aucun bruit de mesure, il est théoriquement possible de remonter à la réponse impulsionnelle correspondante, qui est alors indépendante de cette source et qui constitue la carte d'identité du système : il s'agit alors d'un problème inverse expérimental d'identification basé sur une expérience de calibration. En pratique, les mesures sont toujours plus ou moins  bruitées, et le problème inverse de déconvolution est mal posé et nécessite donc une régularisation, par exemple par régularisation de Tikhonov ou par troncature de valeurs singulières, pour obtenir une réponse impulsionnelle stable, mais plus ou moins biaisée. 
+
+
+
+Une autre solution consiste à utiliser un modèle de structure AutoRegressive à entrée eXterne (ARX), qui comporte deux suites de coefficients (na coefficients pour la partie AR et nb pour la partie X) dont les nombres sont ajustables. Ces deux nombres peuvent être optimisées en effectuant une estimation des coefficients AR et X pour chaque couple (na, nb), et en conservant le couple et les valeurs des coefficients qui conduisent aux résidus les plus faibles sur la sortie (la réponse) par une méthode des moindres carrés linéaires. Un avantage de cette identification par modèle ARX est le fait qu'on arrive à avoir des résidus faibles, de l'ordre du bruit de mesure, avec un nombre de coefficients n = na + nb également très faible, et avec des valeurs qui permettent de bien prédire les sorties pour des entrées (sources) différentes, même si plusieurs couples (na, nb) donnent souvent des performances très proches. 
+
+
+
+Dans la première partie de ce travail on montre le lien physique qui existe entre le modèle convolutif exact et les modèles ARX correspondants, en utilisant une paramétrisation des fonctions concernées par projection sur un peigne de Dirac. Ceci est appliqué ensuite au cas de la diffusion 1D de la chaleur dans une plaque où la source est la température face avant et la réponse une température interne.
+
+
+
+ \vfill doi : \url{https://doi.org/10.25855/SFT2021-049}
+
+}
+ 

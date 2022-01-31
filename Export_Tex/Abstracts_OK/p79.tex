@@ -1,0 +1,90 @@
+
+
+    %=====================================
+    %   WARNING
+    %   FICHIER AUTOMATISE
+    %   NE PAS MODIFIER
+    %=====================================
+
+    \newpage
+
+\backgroundsetup{contents={Work In Progress},scale=7}
+\BgThispage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Papier 79
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Indexations
+\index{UntrauAlix@Untrau, Alix}
+\index{SerraSylvain@Serra, Sylvain}
+\index{SochardSabine@Sochard, Sabine}
+\index{ReneaumeJean-Michel@Reneaume, Jean-Michel}
+\index{LeRouxGalo@Le Roux, Galo}
+%
+% Titre
+\begin{flushleft}
+\phantomsection\addtocounter{section}{1}
+\addcontentsline{toc}{section}{Optimisation Dynamique Temps-Réel d'une centrale solaire thermique}
+{\Large \textbf{Optimisation Dynamique Temps-Réel d'une centrale solaire thermique}}\label{ref:79}
+\end{flushleft}
+%
+% Auteurs
+Alix Untrau$^{1,\star}$, Sylvain Serra$^{1}$, Sabine Sochard$^{1}$, Jean-Michel Reneaume$^{1}$, Galo Le Roux$^{2}$\\[2mm]
+$^{\star}$ \Letter : \url{alix.untrau@univ-pau.fr}\\[2mm]
+{\footnotesize $^{1}$ Universite de Pau et des Pays de l'Adour, E2S UPPA, LaTEP, Pau, France}\\
+{\footnotesize $^{2}$ Laboratório de Simulação e Controle de Processos, Departamento de Engenharia Química, Escola Politécnica da Universidade de São Paulo}\\
+[4mm]
+%
+% Mots clés
+\noindent \textbf{Mots clés : } Optimisation dynamique temps réel, solaire thermique, simulation\\[4mm]
+%
+% Résumé
+\noindent \textbf{Résumé : } 
+
+{\normalsize
+Les centrales solaires thermiques sont caractérisées par l'intermittence de la ressource solaire et par le caractère asynchrone de la production et de la demande en chaleur. Afin de fournir de la chaleur de manière régulière et sur une plus large plage de temps, un stockage de chaleur sensible peut être ajouté. Faire fonctionner une telle centrale solaire thermique avec une demande variable et des conditions météorologiques changeantes tout en maximisant les bénéfices financiers liés à la vente de chaleur est alors un défi.
+
+
+
+
+
+
+
+L'optimisation dynamique temps réel permet d'adapter la stratégie de fonctionnement de la centrale aux conditions réelles, en maximisant la production de chaleur tout en minimisant la consommation électrique des pompes.
+
+
+
+
+
+
+
+L'étude en cours vise à tester une stratégie d'optimisation dynamique temps réel sur un modèle de centrale solaire thermique. Un premier modèle de connaissance, utilisé pour simuler la centrale et résolu à l'aide du logiciel Matlab, permet de représenter le fonctionnement de la centrale. Il fait régulièrement appel à un deuxième modèle, utilisé en optimisation et résolu par le logiciel Gams, pour la détermination des trajectoires optimales des variables de contrôle. L'optimisation dynamique sur Gams correspond à la résolution d'un problème NLP obtenu par discrétisation temporelle des équations du modèle grâce à la méthode de collocation orthogonale sur éléments finis.
+
+
+
+
+
+
+
+Les trajectoires optimales seront alors suivies par des contrôleurs locaux dans le modèle de simulation de la centrale, en la présence de perturbations pour représenter ce que subirait la centrale réelle. L'état de la centrale, c'est-à-dire les températures en différents points du système, sera mis à jour dans l'optimiseur grâce au modèle de simulation.
+
+
+
+
+
+
+
+Le stockage fera l'objet d'un traitement particulier puisque sa dynamique, plus lente, empêche son utilisation optimale sur une durée courte (de l'ordre d'une heure à une journée) envisagée pour l'optimisation temps réel. Une optimisation dynamique offline sur plusieurs jours, basée sur des prévisions météorologiques et de charge, permettra de déterminer l'état du stockage optimal à la fin de chaque journée. L'optimisation dynamique temps réel intégrera alors le suivi de l'état du stockage planifié dans sa fonction objectif économique.
+
+
+
+
+
+
+
+Cette contribution présentera la méthodologie envisagée ainsi que la modélisation simplifiée du système.
+
+ \vfill Work In Progress
+
+}
+ 
